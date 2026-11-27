@@ -1,0 +1,260 @@
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: #333;
+}
+
+/* Main Container */
+.container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 35px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.tagline {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* Main Layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* Sections */
+.input-section,
+.output-section {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+h2 {
+    color: #4c51bf;
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+.section-description {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102,126,234,0.3);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Buttons */
+button {
+    border: none;
+    padding: 13px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.generate-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    margin-bottom: 12px;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102,126,234,0.4);
+}
+
+.sample-btn {
+    width: 100%;
+    background: #edf0ff;
+    color: #4c51bf;
+}
+
+.sample-btn:hover {
+    background: #dfe4ff;
+}
+
+/* Output Box */
+.output-box {
+    min-height: 300px;
+    padding: 18px;
+    border: 2px dashed #c5c9e8;
+    background: #f8f9ff;
+    border-radius: 10px;
+    line-height: 1.8;
+    font-size: 14px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    color: #333;
+}
+
+.placeholder {
+    color: #999;
+}
+
+/* Output Buttons */
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.copy-btn {
+    flex: 1;
+    background: #667eea;
+    color: white;
+}
+
+.copy-btn:hover {
+    background: #5365cf;
+}
+
+.clear-btn {
+    flex: 1;
+    background: #ffecec;
+    color: #d93636;
+}
+
+.clear-btn:hover {
+    background: #ffdada;
+}
+
+/* Message */
+#message {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #238b55;
+    min-height: 18px;
+}
+
+/* Tip Box */
+.tip-box {
+    background: #fff8e6;
+    padding: 18px;
+    margin-top: 25px;
+    border-left: 4px solid #f5b942;
+    border-radius: 8px;
+}
+
+.tip-box h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #9b6b13;
+}
+
+.tip-box p {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 29px;
+    }
+
+    .input-section,
+    .output-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+}

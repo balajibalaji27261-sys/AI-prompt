@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">✨ PromptCraft</div>
+            <h1>AI Prompt Generator</h1>
+            <p>Create better prompts. Get better AI results.</p>
+            <span class="tagline">Designed for College Students</span>
+        </header>
+
+        <main class="main-content">
+
+            <!-- Input Section -->
+            <section class="input-section">
+
+                <h2>Build Your Prompt</h2>
+                <p class="section-description">
+                    Fill in the details below to generate an effective AI prompt.
+                </p>
+
+                <div class="form-group">
+                    <label for="role">1. Role</label>
+                    <input type="text" id="role"
+                        placeholder="e.g. Act as an experienced teacher">
+                </div>
+
+                <div class="form-group">
+                    <label for="task">2. Task</label>
+                    <textarea id="task" rows="3"
+                        placeholder="What do you want AI to do?"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="context">3. Context</label>
+                    <textarea id="context" rows="3"
+                        placeholder="Provide background information..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="constraints">4. Constraints</label>
+                    <textarea id="constraints" rows="3"
+                        placeholder="Mention limitations or requirements..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="format">5. Output Format</label>
+                    <select id="format">
+                        <option value="">Select output format</option>
+                        <option value="Paragraph">Paragraph</option>
+                        <option value="Bullet Points">Bullet Points</option>
+                        <option value="Step-by-Step Guide">Step-by-Step Guide</option>
+                        <option value="Table">Table</option>
+                        <option value="Essay">Essay</option>
+                        <option value="Code">Code</option>
+                        <option value="Presentation Slides">Presentation Slides</option>
+                    </select>
+                </div>
+
+                <button class="generate-btn" onclick="generatePrompt()">
+                    ✨ Generate Prompt
+                </button>
+
+                <button class="sample-btn" onclick="loadSample()">
+                    📌 Load Sample Prompt
+                </button>
+
+            </section>
+
+            <!-- Output Section -->
+            <section class="output-section">
+
+                <h2>Generated Prompt</h2>
+                <p class="section-description">
+                    Your AI prompt will appear here.
+                </p>
+
+                <div class="output-box" id="output">
+                    <p class="placeholder">
+                        Your generated prompt will appear here...
+                    </p>
+                </div>
+
+                <div class="button-group">
+                    <button class="copy-btn" onclick="copyPrompt()">
+                        📋 Copy Prompt
+                    </button>
+
+                    <button class="clear-btn" onclick="clearAll()">
+                        🗑 Clear All
+                    </button>
+                </div>
+
+                <p id="message"></p>
+
+                <div class="tip-box">
+                    <h3>💡 Prompt Writing Tip</h3>
+                    <p>
+                        A good prompt should clearly explain the role,
+                        task, context, constraints and expected output.
+                        The more specific your prompt, the better the result!
+                    </p>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>© 2026 PromptCraft | AI Prompt Generator for Students</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
